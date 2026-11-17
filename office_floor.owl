@@ -15,6 +15,63 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#canUse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#canUse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#discussesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#discussesIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#MeetingRoom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#hosts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#hosts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#restsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#restsIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Cafeteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#worksIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#worksIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Employee"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Manager"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#OpenSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -201,6 +258,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#WaterDispenser">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Cafeteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_floor#Cafeteria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregorio/ontologies/2026/10/office_3rdfloor_E_building#Room"/>
     </owl:Class>
     
 
