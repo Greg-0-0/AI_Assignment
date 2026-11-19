@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.unige.it/simon/assingment_01/library.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.unige.it/simon/assingment_01/library.owl">
+    <Prefix name="" IRI="http://www.semanticweb.org/simon/ontologies/2026/10/untitled-ontology-23/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#BadgeReader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CrowedZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DoorContactSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Librarian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MonitoredZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PresenceSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RFIDBadge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RestrictedZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnathorizedVisitor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#adiacentTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canEnter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#carriesBadge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#detectedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#grantsAccessTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hosts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hostsSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#installedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasZoneName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isRestricted"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#badge_01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bruno"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chiara"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#corridor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#door_study"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#entrance_lobby"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#group_study_room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pir_lobby"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pir_reading"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rare_books_archive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#reader_archive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restroom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#serena"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BadgeReader"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CrowedZone"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DoorContactSensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Librarian"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MonitoredZone"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PresenceSensor"/>
+        <Class IRI="#Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicZone"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestrictedZone"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Student"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnathorizedVisitor"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Librarian"/>
+        <Class IRI="#Student"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PublicZone"/>
+        <Class IRI="#RestrictedZone"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#alice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RFIDBadge"/>
+        <NamedIndividual IRI="#badge_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#bruno"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#chiara"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PublicZone"/>
+        <NamedIndividual IRI="#corridor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DoorContactSensor"/>
+        <NamedIndividual IRI="#door_study"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PublicZone"/>
+        <NamedIndividual IRI="#entrance_lobby"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PublicZone"/>
+        <NamedIndividual IRI="#group_study_room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PublicZone"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PresenceSensor"/>
+        <NamedIndividual IRI="#pir_lobby"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PresenceSensor"/>
+        <NamedIndividual IRI="#pir_reading"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RestrictedZone"/>
+        <NamedIndividual IRI="#rare_books_archive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BadgeReader"/>
+        <NamedIndividual IRI="#reader_archive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PublicZone"/>
+        <NamedIndividual IRI="#restroom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Librarian"/>
+        <NamedIndividual IRI="#serena"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#bruno"/>
+        <NamedIndividual IRI="#chiara"/>
+        <NamedIndividual IRI="#serena"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIn"/>
+        <NamedIndividual IRI="#alice"/>
+        <NamedIndividual IRI="#rare_books_archive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#grantsAccessTo"/>
+        <NamedIndividual IRI="#badge_01"/>
+        <NamedIndividual IRI="#rare_books_archive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIn"/>
+        <NamedIndividual IRI="#bruno"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIn"/>
+        <NamedIndividual IRI="#chiara"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <NamedIndividual IRI="#corridor"/>
+        <NamedIndividual IRI="#rare_books_archive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <NamedIndividual IRI="#corridor"/>
+        <NamedIndividual IRI="#restroom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#installedIn"/>
+        <NamedIndividual IRI="#door_study"/>
+        <NamedIndividual IRI="#group_study_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <NamedIndividual IRI="#entrance_lobby"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+        <NamedIndividual IRI="#corridor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+        <NamedIndividual IRI="#group_study_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#installedIn"/>
+        <NamedIndividual IRI="#pir_lobby"/>
+        <NamedIndividual IRI="#entrance_lobby"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#installedIn"/>
+        <NamedIndividual IRI="#pir_reading"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#installedIn"/>
+        <NamedIndividual IRI="#reader_archive"/>
+        <NamedIndividual IRI="#rare_books_archive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#carriesBadge"/>
+        <NamedIndividual IRI="#serena"/>
+        <NamedIndividual IRI="#badge_01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIn"/>
+        <NamedIndividual IRI="#serena"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRestricted"/>
+        <NamedIndividual IRI="#corridor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRestricted"/>
+        <NamedIndividual IRI="#entrance_lobby"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRestricted"/>
+        <NamedIndividual IRI="#group_study_room"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRestricted"/>
+        <NamedIndividual IRI="#main_reading_room"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRestricted"/>
+        <NamedIndividual IRI="#rare_books_archive"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRestricted"/>
+        <NamedIndividual IRI="#restroom"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hosts"/>
+        <ObjectProperty IRI="#isIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hostsSensor"/>
+        <ObjectProperty IRI="#installedIn"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#installedIn"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isIn"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#adiacentTo"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canEnter"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#carriesBadge"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#detectedBy"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#grantsAccessTo"/>
+        <Class IRI="#RFIDBadge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hosts"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hostsSensor"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#installedIn"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isIn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#adiacentTo"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canEnter"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#carriesBadge"/>
+        <Class IRI="#RFIDBadge"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#detectedBy"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#grantsAccessTo"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hosts"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hostsSensor"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#installedIn"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isIn"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasZoneName"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isRestricted"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasZoneName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isRestricted"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Person"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isIn"/>
+                <Variable IRI="urn:swrl:var#p"/>
+                <Variable IRI="urn:swrl:var#r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Sensor"/>
+                <Variable IRI="urn:swrl:var#s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#installedIn"/>
+                <Variable IRI="urn:swrl:var#s"/>
+                <Variable IRI="urn:swrl:var#r"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#detectedBy"/>
+                <Variable IRI="urn:swrl:var#p"/>
+                <Variable IRI="urn:swrl:var#s"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Person"/>
+                <Variable IRI="urn:swrl:var#p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#carriesBadge"/>
+                <Variable IRI="urn:swrl:var#p"/>
+                <Variable IRI="urn:swrl:var#b"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#grantsAccessTo"/>
+                <Variable IRI="urn:swrl:var#b"/>
+                <Variable IRI="urn:swrl:var#r"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#canEnter"/>
+                <Variable IRI="urn:swrl:var#p"/>
+                <Variable IRI="urn:swrl:var#r"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
